@@ -6,7 +6,6 @@ const userSchema = mongoose.Schema({
 
     passWord: String,
 
-    email: String,
 
     createdDate: {
         type: Date,

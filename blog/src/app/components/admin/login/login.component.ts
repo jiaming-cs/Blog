@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { UserService } from 'src/app/services/user-service/user.service';
 
 @Component({
   selector: 'app-login',
@@ -8,7 +9,8 @@ import { FormBuilder } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private formBuilder:FormBuilder) { }
+  constructor(private formBuilder:FormBuilder,
+    private userService: UserService) { }
 
   loginForm = this.formBuilder.group({
     userName: '',
@@ -22,7 +24,10 @@ export class LoginComponent implements OnInit {
 
   onSubmit(){
     console.log(this.loginForm.value)
-
+    let obs = this.userService.authUser(this.loginForm);
+    obs.subscribe((data)=>{
+      console.log(data)
+    })
   }
 
 }
