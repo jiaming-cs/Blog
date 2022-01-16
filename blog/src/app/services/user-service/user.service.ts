@@ -12,7 +12,7 @@ export class UserService {
 
   constructor(private http:HttpClient, private router:Router) { }
 
-  private URL:string=environment.apiUrlBase + environment.userAuthEndpoint; //endpoint for authoritative user
+  private URL:string=environment.apiUrlBase + environment.userEndpoint; //endpoint for authoritative user
   private httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };//request header
@@ -28,7 +28,7 @@ export class UserService {
     }
     */
     // Return an Oberservation
-    return this.http.post(this.URL, userCredential, this.httpOptions); // return a Oberseravtion (async)
+    return this.http.post(this.URL + environment.userAuthEndpoint, userCredential, this.httpOptions); // return a Oberseravtion (async)
   }
 
   public addUser(username:string){

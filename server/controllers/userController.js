@@ -23,7 +23,8 @@ const authUser = (req, res) => {
                 // console.log(user);
                 //if found, return payload
                 if (user){
-                    user.password = ''
+                    user.password = '';
+                    console.log(user)
                     res.status(200).json({success: true, message: 'success', payload: user})
                 }
                 //else, message of invalid credentials

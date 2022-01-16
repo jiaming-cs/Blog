@@ -12,6 +12,8 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
 import { BlogListComponent } from './components/blog-list/blog-list.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FooterComponent } from './components/footer/footer.component';
+import { CommentsComponent } from './components/comments/comments.component';
 
 
 
@@ -24,7 +26,9 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     AboutMeComponent,
     BlogListComponent,
-    BlogComponent
+    BlogComponent,
+    FooterComponent,
+    CommentsComponent
   ],
   imports: [
     BrowserModule,

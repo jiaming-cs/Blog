@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import { UserService } from 'src/app/services/user-service/user.service';
+import {Md5} from 'ts-md5/dist/md5';
 
 @Component({
   selector: 'app-login',
@@ -13,8 +14,8 @@ export class LoginComponent implements OnInit {
     private userService: UserService) { }
 
   loginForm = this.formBuilder.group({
-    userName: '',
-    passWord: ''
+    username: '',
+    password: ''
   })
 
   ngOnInit(): void {
@@ -24,7 +25,10 @@ export class LoginComponent implements OnInit {
 
   onSubmit(){
     console.log(this.loginForm.value)
-    let obs = this.userService.authUser(this.loginForm);
+    let credentials = this.loginForm.value;
+    console.log(credentials);
+    credentials.password = Md5.hashStr(credentials.password);
+    let obs = this.userService.authUser(credentials);
     obs.subscribe((data)=>{
       console.log(data)
     })
