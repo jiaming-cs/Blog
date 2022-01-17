@@ -14,6 +14,9 @@ import { BlogComponent } from './components/blog/blog.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './components/footer/footer.component';
 import { CommentsComponent } from './components/comments/comments.component';
+import { TypesComponent } from './components/types/types.component';
+import { TagsComponent } from './components/tags/tags.component';
+import { TypesManagementComponent } from './components/admin/types-management/types-management.component';
 
 
 
@@ -28,7 +31,10 @@ import { CommentsComponent } from './components/comments/comments.component';
     BlogListComponent,
     BlogComponent,
     FooterComponent,
-    CommentsComponent
+    CommentsComponent,
+    TypesComponent,
+    TagsComponent,
+    TypesManagementComponent
   ],
   imports: [
     BrowserModule,
