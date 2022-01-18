@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-compose-blog',
   templateUrl: './compose-blog.component.html',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ComposeBlogComponent implements OnInit {
 
+
   constructor() { }
 
+
+  markdownText = "";
   ngOnInit(): void {
+
   }
+
+
 
 }

@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 
+import { AngularMarkdownEditorModule } from 'angular-markdown-editor';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/admin/login/login.component';
@@ -17,6 +19,7 @@ import { CommentsComponent } from './components/comments/comments.component';
 import { TypesComponent } from './components/types/types.component';
 import { TagsComponent } from './components/tags/tags.component';
 import { TypesManagementComponent } from './components/admin/types-management/types-management.component';
+import { BlogOverivewComponent } from './components/blog-overivew/blog-overivew.component';
 
 
 
@@ -34,14 +37,17 @@ import { TypesManagementComponent } from './components/admin/types-management/ty
     CommentsComponent,
     TypesComponent,
     TagsComponent,
-    TypesManagementComponent
+    TypesManagementComponent,
+    BlogOverivewComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularMarkdownEditorModule.forRoot({ iconlibrary: 'fa' })
+
   ],
   providers: [],
   bootstrap: [AppComponent]

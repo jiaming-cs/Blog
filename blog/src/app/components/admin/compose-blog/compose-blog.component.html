@@ -1,1 +1,81 @@
-<p>compose-blog works!</p>
+<app-nav-bar></app-nav-bar>
+
+<div class="container">
+  <div class="row">
+    <div class="input-group m-2">
+      <a class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Original</a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Original</a></li>
+        <li><a class="dropdown-item" href="#">Reproduction</a></li>
+      </ul>
+      <input type="text" class="form-control" placeholder="Titile">
+    </div>
+
+    <div class="input-group m-2">
+      <angular-markdown-editor
+      textareaId="editor1"
+      name="markdownText" [(ngModel)]="markdownText"
+      style="width:100%">
+    </angular-markdown-editor>
+    </div>
+
+    <div class="input-group m-2">
+      <a class="btn btn-outline-primary">Type</a>
+      <select class="form-select me-2" aria-label="Default select example">
+        <option selected>Open this select menu</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+      </select>
+
+      <a class="btn btn-outline-primary rounded-start">Image URL</a>
+      <input type="text" class="form-control">
+    </div>
+
+    <div class="input-group m-2">
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+        <label class="form-check-label" for="inlineCheckbox1">1</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+        <label class="form-check-label" for="inlineCheckbox2">2</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+        <label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
+      </div>
+    </div>
+
+    <div class="input-group m-2">
+      <div class="form-check form-switch me-2">
+        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+        <label class="form-check-label" for="flexSwitchCheckDefault">Recomend List</label>
+      </div>
+
+      <div class="form-check form-switch me-2">
+        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+        <label class="form-check-label" for="flexSwitchCheckDefault">Enable Comment</label>
+      </div>
+    </div>
+
+    <div class="text-end">
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-danger rounded me-2">Back</button>
+        <button type="button" class="btn btn-primary rounded">Release</button>
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+
+
+
+
+</div>
+
+
+<app-footer></app-footer>
