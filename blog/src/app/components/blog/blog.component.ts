@@ -9,6 +9,11 @@ export class BlogComponent implements OnInit {
 
   constructor() { }
 
+  blogText = `
+  # Titile
+
+  I :heart: ngx-markdown
+  `
   ngOnInit(): void {
   }
 

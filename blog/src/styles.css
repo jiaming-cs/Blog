@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 body{
-    background: url('assets/img/triangle-mosaic.png');
+    /* background: url('assets/img/triangle-mosaic.png'); */
+    background-color: #181a1b;
 }
 
 /* shadow */
@@ -148,3 +149,4 @@ body{
     max-width: 60em !important;
     margin: auto;
 }
+

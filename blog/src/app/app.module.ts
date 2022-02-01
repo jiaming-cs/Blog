@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { AngularMarkdownEditorModule } from 'angular-markdown-editor';
+import { MarkdownModule } from 'ngx-markdown';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +21,7 @@ import { TypesComponent } from './components/types/types.component';
 import { TagsComponent } from './components/tags/tags.component';
 import { TypesManagementComponent } from './components/admin/types-management/types-management.component';
 import { BlogOverivewComponent } from './components/blog-overivew/blog-overivew.component';
+import { BlogManagementComponent } from './components/admin/blog-management/blog-management.component';
 
 
 
@@ -38,7 +40,8 @@ import { BlogOverivewComponent } from './components/blog-overivew/blog-overivew.
     TypesComponent,
     TagsComponent,
     TypesManagementComponent,
-    BlogOverivewComponent
+    BlogOverivewComponent,
+    BlogManagementComponent
   ],
   imports: [
     BrowserModule,
@@ -46,8 +49,8 @@ import { BlogOverivewComponent } from './components/blog-overivew/blog-overivew.
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    AngularMarkdownEditorModule.forRoot({ iconlibrary: 'fa' })
-
+    AngularMarkdownEditorModule.forRoot({ iconlibrary: 'fa' }),
+    MarkdownModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
